@@ -1,0 +1,11 @@
+---
+lockfile_version: 1
+depends:
+- name: profile_level_1
+  resolved_source:
+    path: "/Users/jmiller/Devel/ChefProject/one-profile-to-rule-them-all/test/smoke/profile_level_1"
+  version_constraints: ">= 0"
+- name: profile_level_2
+  resolved_source:
+    path: "/Users/jmiller/Devel/ChefProject/one-profile-to-rule-them-all/test/smoke/profile_level_2"
+  version_constraints: ">= 0"
