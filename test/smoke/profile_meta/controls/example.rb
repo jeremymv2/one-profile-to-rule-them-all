@@ -25,6 +25,7 @@ include_controls profile do
 end
 
 if profile == 'profile_level_1'
+  # specific to level_1
   control 'abc' do
     describe 'abc' do
       it { should eq 'abc' }
@@ -33,6 +34,7 @@ if profile == 'profile_level_1'
 end
 
 if profile == 'profile_level_2'
+  # specific to level_2
   control 'xyz' do
     describe 'xyz' do
       it { should eq 'xyz' }
