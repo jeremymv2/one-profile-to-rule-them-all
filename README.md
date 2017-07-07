@@ -36,7 +36,7 @@ include_controls 'cis-level-2' do
 end
 ```
 
-There is not yet a built-in pattern for handling the above scenario where Acme org creates meta/wrapper profiles for the standard CIS ones but wants to use the same overrides in each wrapper profile, without having to maintain that duplicate override code across meta profiles?  
+There is not yet a built-in pattern for handling the above scenario where Acme org creates meta/wrapper profiles for the standard CIS ones but wants to use the same overrides in each wrapper profile, without having to maintain that duplicate override code across meta profiles.
 
 A real-world example of this, for example, is the cis-rhel7-level1-server and cis-rhel7-level2-server profiles that have a bunch of control duplication that someone wants to override, yet maintain separate meta profiles for each.
 
