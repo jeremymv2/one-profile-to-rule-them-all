@@ -37,9 +37,9 @@ include_controls 'cis-level-2' do
 end
 ```
 
-There is not yet a built-in pattern for handling the above scenario where Acme org creates meta/wrapper profiles for the standard CIS ones but wants to use the same overrides in each wrapper profile, without having to maintain that duplicate override code across meta profiles.
+There is not yet a built-in pattern for handling the above scenario where Acme org creates meta/wrapper profiles for the standard CIS ones but wants to use the same overrides in each wrapper profile, without having to maintain that duplicate override code across meta profiles. 
 
-A real-world example of this, for example, is the cis-rhel7-level1-server and cis-rhel7-level2-server profiles that have a bunch of control duplication that someone wants to override, yet maintain separate meta profiles for each.
+A real-world example of this, for example, is the cis-rhel7-level1-server and cis-rhel7-level2-server profiles that have a bunch of control duplication that someone wants to override, yet maintain separate meta profiles for each.  Duplicating the profile overrides in meta profiles for each upstream profile is not DRY.
 
 # Solution A
 Create only one meta-profile that depends on all upstream profiles and use ruby conditionals based on Ohai attribute data (like roles) to select the correct profile. See [here](test/smoke/profile_meta/controls/example.rb)
