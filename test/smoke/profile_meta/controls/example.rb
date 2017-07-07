@@ -22,22 +22,22 @@ include_controls profile do
       it { should be_owned_by 'root' }
     end
   end
-end
 
-if profile == 'profile_level_1'
-  # specific to level_1
-  control 'abc' do
-    describe 'abc' do
-      it { should eq 'abc' }
+  if profile == 'profile_level_1'
+    # specific to level_1
+    control 'abc' do
+      describe 'abc' do
+        it { should eq 'abc' }
+      end
     end
   end
-end
 
-if profile == 'profile_level_2'
-  # specific to level_2
-  control 'xyz' do
-    describe 'xyz' do
-      it { should eq 'xyz' }
+  if profile == 'profile_level_2'
+    # specific to level_2
+    control 'xyz' do
+      describe 'xyz' do
+        it { should eq 'xyz' }
+      end
     end
   end
 end
