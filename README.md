@@ -42,4 +42,4 @@ There is not yet a built-in pattern for handling the above scenario where Acme o
 A real-world example of this, for example, is the cis-rhel7-level1-server and cis-rhel7-level2-server profiles that have a bunch of control duplication that someone wants to override, yet maintain separate meta profiles for each.  Duplicating the profile overrides in meta profiles for each upstream profile is not DRY.
 
 # Solution A
-Create only one meta-profile that depends on all upstream profiles and use ruby conditionals based on Ohai attribute data (like roles) to select the correct profile. See [here](test/smoke/profile_meta/controls/example.rb)
+Create only one DRY meta-profile that depends on all upstream profiles and use ruby conditionals based on Ohai attribute data (like roles) to select the correct profile. See [here](test/smoke/profile_meta/controls/example.rb)
