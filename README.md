@@ -1,5 +1,6 @@
 # one-profile-to-rule-them-all
- 
+This example shows how to create an Inspec meta profile [profile_meta](test/smoke/profile_meta) that depends on [profile_level_1](test/smoke/profile_level_1) and [profile_level_2](test/smoke/profile_level_2) but defines common overrides for both, and selects the correct one to run based on node attributes.
+
 # Usage
 ```
 kitchen converge && kitchen verify
