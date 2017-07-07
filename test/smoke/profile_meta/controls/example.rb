@@ -30,9 +30,7 @@ include_controls profile do
         it { should eq 'abc' }
       end
     end
-  end
-
-  if profile == 'profile_level_2'
+  elsif profile == 'profile_level_2'
     # specific to level_2
     control 'xyz' do
       describe 'xyz' do
