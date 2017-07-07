@@ -7,7 +7,7 @@ kitchen converge && kitchen verify
 
 # Testing
 Open up `recipes/default.rb` and change `'roles' => ["intranet-web"]` to `'roles' => ["dmz-web"]`
-Then re-run `kitchen converge && kitchen verify`
+Then re-run `kitchen converge && kitchen verify` watch the _different_ profiles being executed as a result.
 
 # Problem Statement
 As of [inspec](https://www.inspec.io) version 1.31.1, if you have the following meta profiles:
