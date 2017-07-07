@@ -1,8 +1,7 @@
 # encoding: utf-8
 # copyright: 2015, The Authors
 
-roles = json('/tmp/node.json').value(['roles'])
-puts "Parsed Roles: #{roles}"
+roles = ::File.exist?('/tmp/node.json') ? json('/tmp/node.json').value(['roles']) : []
 
 profile = if roles.include?('intranet-web')
             'profile_level_1'
@@ -11,8 +10,6 @@ profile = if roles.include?('intranet-web')
           else
             'profile_level_1'
           end
-
-puts "Selected Profile: #{profile}"
 
 include_controls profile do
   # common overrides here
