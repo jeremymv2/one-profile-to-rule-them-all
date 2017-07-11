@@ -1,11 +1,11 @@
 # encoding: utf-8
 # copyright: 2015, The Authors
 
-roles = ::File.exist?('/tmp/node.json') ? json('/tmp/node.json').value(['roles']) : []
+roles = json('/tmp/node.json')
 
-profile = if roles.include?('intranet-web')
+profile = if roles['roles'].include?('intranet-web')
             'profile_level_1'
-          elsif roles.include?('dmz-web')
+          elsif roles['roles'].include?('dmz-web')
             'profile_level_2'
           else
             'profile_level_1'

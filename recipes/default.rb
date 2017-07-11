@@ -7,7 +7,7 @@
 # test changing role names here
 roles = {
   # values checked for in inspec profile (meta_profile) are `dmz-web` and `intranet-web`
-  'roles' => ["dmz-web"]
+  'roles' => ["intranet-web"]
 }
 
 output = "#{Chef::JSONCompat.to_json_pretty(roles)}"
